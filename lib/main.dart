@@ -70,13 +70,15 @@ class _State extends State<MyApp> {
                               Text("By Nivedita Datta", textAlign: TextAlign.left, style: TextStyle(color: Colors.white, fontSize: 15),),
                             ],
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text("Find Me On Twitter", textAlign: TextAlign.left, style: TextStyle(color: Colors.blue, fontSize: 12),),
-                              SizedBox(width: 5,),
-                              Icon(SimpleIcons.twitter, color: Colors.blue, size: 12,),
-                            ],
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("Find Me On Twitter", textAlign: TextAlign.left, style: TextStyle(color: Colors.blue, fontSize: 12),),
+                                SizedBox(width: 5,),
+                                Icon(SimpleIcons.twitter, color: Colors.blue, size: 12,),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -103,21 +105,26 @@ class _State extends State<MyApp> {
               ),
               SizedBox(height: 50,),
               Row(children: [
-                Text(
-                  'LOOKING FOR UI INSPIRATION?',
-                  textAlign: TextAlign.left,
-                  style: GoogleFonts.asap(
-                    textStyle: TextStyle(fontSize: 30, color: Colors.blue, letterSpacing: .5),
+                Expanded(
+                  child: Text(
+                    'LOOKING FOR UI INSPIRATION?',
+                    textAlign: TextAlign.left,
+                    style: GoogleFonts.asap(
+                      textStyle: TextStyle(fontSize: 30, color: Colors.blue, letterSpacing: 1, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
-              ],),
+              ],
+              ),
               SizedBox(height: 15,),
               Row(children: [
-                Text(
-                  'We are coming up with something big and exciting.',
-                  textAlign: TextAlign.left,
-                  style: GoogleFonts.asap(
-                    textStyle: TextStyle(fontSize: 30, color: Colors.blue, letterSpacing: .5),
+                Expanded(
+                  child: Text(
+                    'We are coming up with something big and exciting.',
+                    textAlign: TextAlign.left,
+                    style: GoogleFonts.asap(
+                      textStyle: TextStyle(fontSize: 30, color: Colors.blue, letterSpacing: .5),
+                    ),
                   ),
                 ),
               ],),
