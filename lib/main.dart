@@ -72,11 +72,11 @@ class _State extends State<MyApp> {
                       shape: RoundedRectangleBorder( //to set border radius to button
                           borderRadius: BorderRadius.circular(10)
                       ),
-                      padding: EdgeInsets.all(20)),
+                      padding: EdgeInsets.all(isSmallScreen(context)? 5 : 20)),
                   child:
                   Row(
                     children: [
-                      //SizedBox(width: 5,),
+                      SizedBox(width: 5,),
                       CircleAvatar(radius: isSmallScreen(context)? 15 : 30, backgroundColor: Colors.white, child: ClipOval( child: Image.network("https://pbs.twimg.com/profile_images/1424313077978128385/-8ZPfZVE_400x400.jpg")),),
                       isSmallScreen(context)? SizedBox(width: 10,) : SizedBox.shrink(),
                       Flexible(
