@@ -94,15 +94,16 @@ class _State extends State<MyApp> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Icon(SimpleIcons.twitter, color: Colors.blue, size: isSmallScreen(context)? 10 : 12,),
-                                  SizedBox(width: 5,),
                                   Flexible(child: Text("Find Me On Twitter", textAlign: TextAlign.left, style: TextStyle(color: Colors.blue, fontSize: isSmallScreen(context)? 10 : 12),)),
                                 ],
                               ),
                             ),
+                            SizedBox(width: 5,),
                           ],
                         ),
                       ),
+                      SizedBox(width: 3,),
+                      Icon(SimpleIcons.twitter, color: Colors.blue, size: isSmallScreen(context)? 12 : 20,),
                       //Icon(SimpleIcons.twitter, color: Colors.blue, size: 12,),
                       SizedBox(width: 8,),
                     ],
