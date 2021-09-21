@@ -63,7 +63,7 @@ class _State extends State<MyApp> {
               //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: isSmallScreen(context)? 185 : 230,
+                  width: isSmallScreen(context)? 180 : 210,
                   height: 57,
                   child: ElevatedButton(onPressed: _launchURL,
                   style: ElevatedButton.styleFrom(
@@ -86,7 +86,10 @@ class _State extends State<MyApp> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Flexible(child: Text("By Nivedita Datta", textAlign: TextAlign.left, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,  fontSize: isSmallScreen(context)? 12 : 15),)),
+                                Flexible(child: Text("By Nivedita", textAlign: TextAlign.left, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,  fontSize: isSmallScreen(context)? 12 : 15),)),
+                                SizedBox(width: 3,),
+                                Icon(SimpleIcons.twitter, color: Colors.blue, size: isSmallScreen(context)? 12 : 17,),
+
                               ],
                             ),
                             SizedBox(height: 2,),
@@ -102,9 +105,6 @@ class _State extends State<MyApp> {
                           ],
                         ),
                       ),
-                      SizedBox(width: 3,),
-                      Icon(SimpleIcons.twitter, color: Colors.blue, size: isSmallScreen(context)? 12 : 20,),
-                      //Icon(SimpleIcons.twitter, color: Colors.blue, size: 12,),
                       SizedBox(width: 8,),
                     ],
                   )
