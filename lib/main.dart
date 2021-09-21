@@ -50,11 +50,11 @@ class _State extends State<MyApp> {
                   height: 60,
                   child: ElevatedButton(onPressed: _launchURL,
                   style: ElevatedButton.styleFrom(
-                      side: BorderSide(width:1, color:Colors.white),
+                      //side: BorderSide(width:1, color:Colors.white),
                       primary: Colors.transparent,
-                      shape: RoundedRectangleBorder( //to set border radius to button
+                      /*shape: RoundedRectangleBorder( //to set border radius to button
                           borderRadius: BorderRadius.circular(10)
-                      ),
+                      ),*/
                       padding: EdgeInsets.all(20)),
                   child:
                   Row(
@@ -70,15 +70,13 @@ class _State extends State<MyApp> {
                               Text("By Nivedita Datta", textAlign: TextAlign.left, style: TextStyle(color: Colors.white, fontSize: 15),),
                             ],
                           ),
-                          Expanded(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Text("Find Me On Twitter", textAlign: TextAlign.left, style: TextStyle(color: Colors.blue, fontSize: 12),),
-                                SizedBox(width: 5,),
-                                Icon(SimpleIcons.twitter, color: Colors.blue, size: 12,),
-                              ],
-                            ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text("Find Me On Twitter", textAlign: TextAlign.left, style: TextStyle(color: Colors.blue, fontSize: 12),),
+                              SizedBox(width: 5,),
+                              Icon(SimpleIcons.twitter, color: Colors.blue, size: 12,),
+                            ],
                           ),
                         ],
                       ),
