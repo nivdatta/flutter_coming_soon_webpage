@@ -46,7 +46,7 @@ class _State extends State<MyApp> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 SizedBox(
-                  width: 230,
+                  width: 250,
                   height: 60,
                   child: ElevatedButton(onPressed: _launchURL,
                   style: ElevatedButton.styleFrom(
@@ -91,6 +91,7 @@ class _State extends State<MyApp> {
         SizedBox(width: 15.0),
               SizedBox(height: 100,),
               Row(children: [
+                SizedBox(width: 60,),
                 Icon(Icons.stacked_line_chart_sharp, color: Colors.blue, size: 30,),
                 Text(
                   '  WELCOME TO FLUTTER STUDIO',
@@ -101,8 +102,9 @@ class _State extends State<MyApp> {
                 ),
               ],
               ),
-              SizedBox(height: 50,),
+              SizedBox(height: 100,),
               Row(children: [
+                SizedBox(width: 60,),
                 Expanded(
                   child: Text(
                     'LOOKING FOR UI INSPIRATION?',
@@ -116,12 +118,13 @@ class _State extends State<MyApp> {
               ),
               SizedBox(height: 15,),
               Row(children: [
+                SizedBox(width: 60,),
                 Expanded(
                   child: Text(
                     'We are coming up with something big and exciting.',
                     textAlign: TextAlign.left,
                     style: GoogleFonts.asap(
-                      textStyle: TextStyle(fontSize: 30, color: Colors.blue, letterSpacing: .5),
+                      textStyle: TextStyle(fontSize: 23, color: Colors.white, letterSpacing: .5),
                     ),
                   ),
                 ),
