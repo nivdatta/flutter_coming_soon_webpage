@@ -28,6 +28,22 @@ class _State extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+
+    bool isLargeScreen(BuildContext context) {
+      return MediaQuery.of(context).size.width > 1200;
+    }
+
+    //Small screen is any screen whose width is less than 800 pixels
+    bool isSmallScreen(BuildContext context) {
+      return MediaQuery.of(context).size.width < 800;
+    }
+
+    //Medium screen is any screen whose width is less than 1200 pixels,
+    //and more than 800 pixels
+    bool isMediumScreen(BuildContext context) {
+      return MediaQuery.of(context).size.width > 800 &&
+          MediaQuery.of(context).size.width < 1200;
+    }
     // TODO: implement build
     return new Scaffold(
       body: new Container(
@@ -44,10 +60,11 @@ class _State extends State<MyApp> {
             children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
+              //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: 230,
-                  height: 60,
+                  width: isSmallScreen(context)? 185 : 230,
+                  height: 57,
                   child: ElevatedButton(onPressed: _launchURL,
                   style: ElevatedButton.styleFrom(
                       side: BorderSide(width:1, color:Colors.white),
@@ -60,24 +77,26 @@ class _State extends State<MyApp> {
                   Row(
                     children: [
                       //SizedBox(width: 5,),
-                      CircleAvatar(radius: 30, backgroundColor: Colors.white, child: ClipOval( child: Image.network("https://pbs.twimg.com/profile_images/1424313077978128385/-8ZPfZVE_400x400.jpg")),),
-                      //SizedBox(width: 10,),
+                      CircleAvatar(radius: isSmallScreen(context)? 15 : 30, backgroundColor: Colors.white, child: ClipOval( child: Image.network("https://pbs.twimg.com/profile_images/1424313077978128385/-8ZPfZVE_400x400.jpg")),),
+                      isSmallScreen(context)? SizedBox(width: 10,) : SizedBox.shrink(),
                       Flexible(
                         child: Column(
                           children: [
+                            isSmallScreen(context)? SizedBox(height: 3,) : SizedBox.shrink(),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text("By Nivedita Datta", textAlign: TextAlign.left, style: TextStyle(color: Colors.white, fontSize: 15),),
+                                Flexible(child: Text("By Nivedita Datta", textAlign: TextAlign.left, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,  fontSize: isSmallScreen(context)? 12 : 15),)),
                               ],
                             ),
+                            SizedBox(height: 2,),
                             Flexible(
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Text("Find Me On Twitter", textAlign: TextAlign.left, style: TextStyle(color: Colors.blue, fontSize: 12),),
+                                  Icon(SimpleIcons.twitter, color: Colors.blue, size: isSmallScreen(context)? 10 : 12,),
                                   SizedBox(width: 5,),
-                                  Icon(SimpleIcons.twitter, color: Colors.blue, size: 12,),
+                                  Flexible(child: Text("Find Me On Twitter", textAlign: TextAlign.left, style: TextStyle(color: Colors.blue, fontSize: isSmallScreen(context)? 10 : 12),)),
                                 ],
                               ),
                             ),
