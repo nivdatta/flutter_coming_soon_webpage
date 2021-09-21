@@ -46,7 +46,7 @@ class _State extends State<MyApp> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 SizedBox(
-                  width: 250,
+                  width: 230,
                   height: 60,
                   child: ElevatedButton(onPressed: _launchURL,
                   style: ElevatedButton.styleFrom(
@@ -62,23 +62,27 @@ class _State extends State<MyApp> {
                       //SizedBox(width: 5,),
                       CircleAvatar(radius: 30, backgroundColor: Colors.white, child: ClipOval( child: Image.network("https://pbs.twimg.com/profile_images/1424313077978128385/-8ZPfZVE_400x400.jpg")),),
                       //SizedBox(width: 10,),
-                      Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text("By Nivedita Datta", textAlign: TextAlign.left, style: TextStyle(color: Colors.white, fontSize: 15),),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text("Find Me On Twitter", textAlign: TextAlign.left, style: TextStyle(color: Colors.blue, fontSize: 12),),
-                              SizedBox(width: 5,),
-                              Icon(SimpleIcons.twitter, color: Colors.blue, size: 12,),
-                            ],
-                          ),
-                        ],
+                      Flexible(
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("By Nivedita Datta", textAlign: TextAlign.left, style: TextStyle(color: Colors.white, fontSize: 15),),
+                              ],
+                            ),
+                            Flexible(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text("Find Me On Twitter", textAlign: TextAlign.left, style: TextStyle(color: Colors.blue, fontSize: 12),),
+                                  SizedBox(width: 5,),
+                                  Icon(SimpleIcons.twitter, color: Colors.blue, size: 12,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       //Icon(SimpleIcons.twitter, color: Colors.blue, size: 12,),
                       SizedBox(width: 8,),
