@@ -46,7 +46,7 @@ class _State extends State<MyApp> {
     }
     // TODO: implement build
     return new Scaffold(
-      body: new Container(
+      body: Container(
       decoration: BoxDecoration(
       image: DecorationImage(
     image: NetworkImage(
@@ -56,7 +56,7 @@ class _State extends State<MyApp> {
       ),
         //color: CupertinoColors.black,
         padding: new EdgeInsets.all(16.0),
-        child: new Column(
+        child: new Column (
             children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -64,7 +64,7 @@ class _State extends State<MyApp> {
               children: [
                 SizedBox(
                   width: isSmallScreen(context)? 180 : 220,
-                  height: 57,
+                  height: 65,
                   child: ElevatedButton(onPressed: _launchURL,
                   style: ElevatedButton.styleFrom(
                       side: BorderSide(width:1, color:Colors.white),
@@ -114,7 +114,7 @@ class _State extends State<MyApp> {
         SizedBox(width: 15.0),
               SizedBox(height: 100,),
               Row(children: [
-                SizedBox(width: 60,),
+                SizedBox(width: isSmallScreen(context)? 30 : 60,),
                 Icon(Icons.stacked_line_chart_sharp, color: Colors.blue, size: 30,),
                 Text(
                   '  WELCOME TO FLUTTER STUDIO',
@@ -127,7 +127,7 @@ class _State extends State<MyApp> {
               ),
               SizedBox(height: 100,),
               Row(children: [
-                SizedBox(width: 60,),
+                SizedBox(width: isSmallScreen(context)? 30 : 60,),
                 Expanded(
                   child: Text(
                     'LOOKING FOR UI INSPIRATION?',
@@ -141,7 +141,7 @@ class _State extends State<MyApp> {
               ),
               SizedBox(height: 15,),
               Row(children: [
-                SizedBox(width: 60,),
+                SizedBox(width: isSmallScreen(context)? 30 : 60,),
                 Expanded(
                   child: Text(
                     'We are coming up with something big and exciting.',

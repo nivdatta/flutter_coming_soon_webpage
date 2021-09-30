@@ -1,6 +1,6 @@
 {
-    "name": "coming_soon_page",
-    "short_name": "coming_soon_page",
+    "name": "web_page_flutter",
+    "short_name": "web_page_flutter",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
