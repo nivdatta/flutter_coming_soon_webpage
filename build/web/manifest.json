@@ -1,6 +1,6 @@
 {
-    "name": "flutter_studio",
-    "short_name": "flutter_studio",
+    "name": "Flutter Studio",
+    "short_name": "Flutter Studio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
